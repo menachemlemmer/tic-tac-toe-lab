@@ -1,20 +1,55 @@
 body {
-  background-color: gainsboro;
+  background-color: rgb(75, 117, 231);
+  color: white;
   /* Use a system font, if none are available use an available sans-sarif */
   font-family: system-ui, sans-serif;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+button {
+  height: 40px;
+  width: 90px;
+  border-radius: 10px;
+  background-color: rgb(75, 117, 231);
+  color: white;
+  border: 2px solid white;
+  transition: 0.3s;
+  margin: 30px;
+  font-size: 16px;
+  padding: 8px;
+}
+
+button:hover {
+  color: rgb(75, 117, 231);
+  background-color: white;
 }
 
 .board {
   display: flex;
   flex-wrap: wrap;
-  width: 325px;
+  width: 375px;
+  margin-top: 30px;
 }
 
 .sqr {
   width: 30%;
   aspect-ratio: 1/1;
-  border: 3px solid black;
+  border: 3px solid white;
   font-size: 64px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.sqr:hover {
+  background-color: white;
+  color: rgb(75, 117, 231);
 }

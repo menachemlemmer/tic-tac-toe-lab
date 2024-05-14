@@ -32,6 +32,9 @@ function init() {
   turn = "X";
   winner = false;
   tie = false;
+  squareEls.forEach((square) => {
+    square.classList.remove("flip");
+  });
   render();
 }
 
@@ -100,6 +103,7 @@ function handleClick(event) {
   if (board[squareIdx] !== "" || winner === true) {
     return;
   }
+  event.target.classList.add("flip");
   placePiece(squareIdx);
   checkForWinner();
   checkForTie();
